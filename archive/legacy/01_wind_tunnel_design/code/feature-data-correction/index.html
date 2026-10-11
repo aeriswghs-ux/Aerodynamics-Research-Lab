@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BME280 Data Platform</title>
+  <script src="https://cdn.plot.ly/plotly-2.26.0.min.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Sora:wght@300;400;500;600&display=swap');
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:       #0d1117;
+      --surface:  #161b22;
+      --surface2: #1c2128;
+      --border:   #30363d;
+      --accent:   #00d4aa;
+      --text:     #e6edf3;
+      --muted:    #8b949e;
+    }
+
+    body { font-family: 'Sora', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
+
+    /* ── Top bar ─────────────────────────────────────────────────────────── */
+    .topbar {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 24px;
+      display: flex; align-items: center; justify-content: space-between;
+      position: sticky; top: 0; z-index: 10;
+    }
+    .logo { font-family: 'JetBrains Mono', monospace; font-size: 14px; color: var(--accent); letter-spacing: .05em; }
+    .logo span { color: var(--muted); }
+    .status-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); display: inline-block; margin-right: 6px; animation: pulse 2s infinite; }
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.45} }
+
+    /* ── Controls bar ────────────────────────────────────────────────────── */
+    .controls {
+      background: var(--surface2);
+      border-bottom: 1px solid var(--border);
+      padding: 10px 24px;
+      display: flex; flex-wrap: wrap; align-items: center; gap: 20px;
+    }
+    .ctrl-group { display: flex; align-items: center; gap: 10px; }
+    .ctrl-label { font-size: 11px; color: var(--muted); font-family: 'JetBrains Mono', monospace; min-width: 110px; }
+    input[type=range] {
+      -webkit-appearance: none; width: 130px; height: 3px;
+      background: var(--border); border-radius: 2px; outline: none;
+    }
+    input[type=range]::-webkit-slider-thumb {
+      -webkit-appearance: none; width: 14px; height: 14px;
+      border-radius: 50%; background: var(--accent); cursor: pointer;
+    }
+    .ctrl-val { font-size: 12px; font-family: 'JetBrains Mono', monospace; color: var(--accent); min-width: 52px; }
+
+    /* ── Buttons ─────────────────────────────────────────────────────────── */
+    .btn {
+      font-family: 'JetBrains Mono', monospace; font-size: 11px;
+      padding: 6px 14px; border-radius: 4px;
+      border: 1px solid var(--border); background: transparent;
+      color: var(--muted); cursor: pointer; transition: all .2s;
+      text-decoration: none; display: inline-block;
+    }
+    .btn:hover { border-color: var(--accent); color: var(--accent); }
+    .btn.primary { border-color: var(--accent); color: var(--accent); }
+
+    /* ── Tabs ────────────────────────────────────────────────────────────── */
+    .tabs {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px;
+      display: flex; gap: 0; overflow-x: auto;
+    }
+    .tab {
+      font-size: 12px; font-family: 'JetBrains Mono', monospace;
+      padding: 11px 18px; cursor: pointer;
+      border-bottom: 2px solid transparent;
+      color: var(--muted); transition: all .2s; white-space: nowrap;
+    }
+    .tab.active { color: var(--accent); border-bottom-color: var(--accent); }
+    .tab:hover:not(.active) { color: var(--text); }
+
+    /* ── Main content ────────────────────────────────────────────────────── */
+    .main { padding: 20px 24px; }
+
+    .stat-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin-bottom: 20px; }
+    .stat-card { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 14px 16px; }
+    .stat-name { font-size: 10px; color: var(--muted); font-family: 'JetBrains Mono', monospace; margin-bottom: 8px; text-transform: uppercase; letter-spacing: .06em; }
+    .stat-val  { font-size: 24px; font-weight: 600; line-height: 1; }
+    .stat-sub  { font-size: 11px; color: var(--muted); margin-top: 5px; font-family: 'JetBrains Mono', monospace; }
+
+    .chart-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 14px; }
+    .chart-card { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 16px; }
+    .chart-card.full { grid-column: 1 / -1; }
+    .chart-title {
+      font-size: 11px; color: var(--muted);
+      font-family: 'JetBrains Mono', monospace;
+      margin-bottom: 14px;
+      display: flex; align-items: center; gap: 7px;
+    }
+    .chart-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+    .chart-inner { width: 100%; height: 280px; }
+    .chart-inner.tall { height: 380px; }
+
+    /* ── Upload tab ──────────────────────────────────────────────────────── */
+    .upload-zone {
+      border: 1px dashed var(--border); border-radius: 6px;
+      padding: 40px; text-align: center; cursor: pointer;
+      transition: all .2s; margin-bottom: 20px;
+    }
+    .upload-zone:hover { border-color: var(--accent); background: rgba(0,212,170,.03); }
+    .upload-zone input { display: none; }
+    .upload-title { font-size: 14px; color: var(--muted); margin-bottom: 8px; }
+    .upload-sub   { font-size: 12px; color: var(--muted); opacity: .6; font-family: 'JetBrains Mono', monospace; }
+
+    .data-table { width: 100%; border-collapse: collapse; }
+    .data-table th { padding: 7px 12px; font-size: 10px; color: var(--muted); text-align: left; font-family: 'JetBrains Mono', monospace; font-weight: 400; border-bottom: 1px solid var(--border); }
+    .data-table td { padding: 7px 12px; font-size: 12px; font-family: 'JetBrains Mono', monospace; border-bottom: 1px solid var(--border); }
+
+    /* ── Toast ───────────────────────────────────────────────────────────── */
+    .toast {
+      position: fixed; bottom: 24px; right: 24px;
+      background: var(--surface2); border: 1px solid var(--accent);
+      border-radius: 6px; padding: 10px 18px;
+      font-size: 12px; font-family: 'JetBrains Mono', monospace; color: var(--accent);
+      opacity: 0; transition: opacity .3s; pointer-events: none; z-index: 999;
+    }
+    .toast.show { opacity: 1; }
+
+    /* ── Loading spinner ─────────────────────────────────────────────────── */
+    .loading { text-align: center; padding: 60px; color: var(--muted); font-family: 'JetBrains Mono', monospace; font-size: 12px; }
+    .spinner { width: 24px; height: 24px; border: 2px solid var(--border); border-top-color: var(--accent); border-radius: 50%; animation: spin .8s linear infinite; margin: 0 auto 12px; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+  </style>
+</head>
+<body>
+
+<!-- Top bar -->
+<div class="topbar">
+  <div class="logo">BME280<span>.platform</span> &nbsp;<span class="status-dot"></span><span style="font-size:11px;color:var(--muted)">LIVE</span></div>
+  <div style="display:flex;gap:8px">
+    <button class="btn" onclick="resetData()">↺ Reset</button>
+    <button class="btn primary" onclick="exportCSV()">↓ Export CSV</button>
+  </div>
+</div>
+
+<!-- Controls -->
+<div class="controls">
+  <div class="ctrl-group">
+    <span class="ctrl-label">Temp offset (°C)</span>
+    <input type="range" id="tempOffset" min="0" max="200" step="0.5" value="159.67" oninput="onOffsetChange()">
+    <span class="ctrl-val" id="tempOffsetVal">159.67</span>
+  </div>
+  <div class="ctrl-group">
+    <span class="ctrl-label">Humidity offset (%)</span>
+    <input type="range" id="humOffset" min="-100" max="100" step="1" value="-55" oninput="onOffsetChange()">
+    <span class="ctrl-val" id="humOffsetVal">-55</span>
+  </div>
+  <label class="btn" style="cursor:pointer">
+    ↑ Upload CSV
+    <input type="file" id="csvInput" accept=".csv" onchange="handleUpload(event)">
+  </label>
+</div>
+
+<!-- Tabs -->
+<div class="tabs">
+  <div class="tab active" data-tab="overview"     onclick="setTab('overview',this)">Overview</div>
+  <div class="tab"        data-tab="temperature"  onclick="setTab('temperature',this)">Temperature</div>
+  <div class="tab"        data-tab="humidity"     onclick="setTab('humidity',this)">Humidity</div>
+  <div class="tab"        data-tab="pressure"     onclick="setTab('pressure',this)">Pressure</div>
+  <div class="tab"        data-tab="comparison"   onclick="setTab('comparison',this)">Comparison</div>
+  <div class="tab"        data-tab="data"         onclick="setTab('data',this)">Data</div>
+</div>
+
+<!-- Main content -->
+<div class="main" id="mainContent">
+  <div class="loading"><div class="spinner"></div>Loading...</div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+  let currentTab = 'overview';
+
+  // ── Helpers ──────────────────────────────────────────────────────────────
+
+  function offsets() {
+    return {
+      temp_offset:     parseFloat(document.getElementById('tempOffset').value),
+      humidity_offset: parseFloat(document.getElementById('humOffset').value),
+    };
+  }
+
+  function qs(params) {
+    return '?' + new URLSearchParams(params).toString();
+  }
+
+  function showToast(msg) {
+    const t = document.getElementById('toast');
+    t.textContent = msg;
+    t.classList.add('show');
+    setTimeout(() => t.classList.remove('show'), 2500);
+  }
+
+  function loading() {
+    document.getElementById('mainContent').innerHTML =
+      '<div class="loading"><div class="spinner"></div>Loading...</div>';
+  }
+
+  // ── Plotly theme helpers ─────────────────────────────────────────────────
+
+  const PLOTLY_LAYOUT = {
+    plot_bgcolor: '#151a21', paper_bgcolor: '#151a21',
+    font: { color: '#e0e4e8', family: 'JetBrains Mono, monospace', size: 11 },
+    margin: { t: 10, b: 40, l: 50, r: 20 },
+    hovermode: 'x unified',
+    xaxis: { gridcolor: '#2d3139', showgrid: true, zeroline: false },
+    yaxis: { gridcolor: '#2d3139', showgrid: true, zeroline: false },
+    showlegend: false,
+  };
+
+  function renderPlotly(divId, figJson) {
+    Plotly.newPlot(divId, figJson.data, { ...PLOTLY_LAYOUT, ...figJson.layout }, { responsive: true, displayModeBar: false });
+  }
+
+  // ── Tab rendering ────────────────────────────────────────────────────────
+
+  async function render() {
+    loading();
+    const o = offsets();
+
+    if (currentTab === 'data') {
+      await renderDataTab(o);
+      return;
+    }
+
+    // Fetch stats + charts in parallel
+    const [statsRes, chartsRes] = await Promise.all([
+      fetch('/api/stats' + qs(o)),
+      fetch('/api/charts/' + currentTab + qs(o)),
+    ]);
+    const stats  = await statsRes.json();
+    const charts = await chartsRes.json();
+
+    if (currentTab === 'overview')     renderOverview(stats, charts);
+    else if (currentTab === 'comparison') renderComparison(stats, charts);
+    else                               renderSingle(currentTab, stats, charts);
+  }
+
+  function statCard(name, val, unit, color, sub) {
+    return `<div class="stat-card">
+      <div class="stat-name">${name}</div>
+      <div class="stat-val" style="color:${color}">${val}</div>
+      <div class="stat-sub">${sub || unit}</div>
+    </div>`;
+  }
+
+  function statsRow(stats) {
+    const t = stats.temperature, h = stats.humidity, p = stats.pressure;
+    return `<div class="stat-row">
+      ${statCard('Avg Temp',     t.mean.toFixed(2) + '°C', '', '#ff6b6b', `±${t.std.toFixed(2)} σ`)}
+      ${statCard('Avg Humidity', h.mean.toFixed(2) + '%',  '', '#4ecdc4', `min ${h.min.toFixed(1)} / max ${h.max.toFixed(1)}`)}
+      ${statCard('Avg Pressure', p.mean.toFixed(2),         '', '#95e1d3', 'hPa')}
+      ${statCard('Data Points',  stats.data_points,          '', 'var(--accent)', 'samples')}
+    </div>`;
+  }
+
+  function renderOverview(stats, charts) {
+    document.getElementById('mainContent').innerHTML = `
+      ${statsRow(stats)}
+      <div class="chart-grid">
+        <div class="chart-card"><div class="chart-title"><span class="chart-dot" style="background:#ff6b6b"></span>Temperature (corrected)</div><div class="chart-inner" id="ch_temp"></div></div>
+        <div class="chart-card"><div class="chart-title"><span class="chart-dot" style="background:#4ecdc4"></span>Humidity (corrected)</div><div class="chart-inner" id="ch_hum"></div></div>
+        <div class="chart-card"><div class="chart-title"><span class="chart-dot" style="background:#95e1d3"></span>Pressure</div><div class="chart-inner" id="ch_press"></div></div>
+        <div class="chart-card"><div class="chart-title"><span class="chart-dot" style="background:#f38181"></span>Altitude</div><div class="chart-inner" id="ch_alt"></div></div>
+      </div>`;
+    renderPlotly('ch_temp',  charts.chart1);
+    renderPlotly('ch_hum',   charts.chart2);
+    renderPlotly('ch_press', charts.chart3);
+    renderPlotly('ch_alt',   charts.chart4);
+  }
+
+  function renderSingle(tab, stats, charts) {
+    const map = {
+      temperature: { key: 'temperature', color: '#ff6b6b', unit: '°C',  label: 'Temperature trend (corrected)' },
+      humidity:    { key: 'humidity',    color: '#4ecdc4', unit: '%',   label: 'Humidity trend (corrected)' },
+      pressure:    { key: 'pressure',    color: '#95e1d3', unit: 'hPa', label: 'Pressure trend' },
+    };
+    const m = map[tab];
+    const s = stats[m.key];
+    document.getElementById('mainContent').innerHTML = `
+      <div class="stat-row">
+        ${statCard('Mean',   s.mean.toFixed(2),   m.unit, m.color, m.unit)}
+        ${statCard('Min',    s.min.toFixed(2),    m.unit, m.color, m.unit)}
+        ${statCard('Max',    s.max.toFixed(2),    m.unit, m.color, m.unit)}
+        ${statCard('Std Dev',s.std.toFixed(2),    '',     m.color, 'σ')}
+        ${statCard('Median', s.median.toFixed(2), m.unit, m.color, m.unit)}
+      </div>
+      <div class="chart-card full"><div class="chart-title"><span class="chart-dot" style="background:${m.color}"></span>${m.label}</div><div class="chart-inner tall" id="ch_single"></div></div>`;
+    renderPlotly('ch_single', charts.chart1);
+  }
+
+  function renderComparison(stats, charts) {
+    document.getElementById('mainContent').innerHTML = `
+      ${statsRow(stats)}
+      <div class="chart-card full">
+        <div class="chart-title">Multi-sensor comparison</div>
+        <div style="display:flex;gap:18px;margin-bottom:14px;font-size:11px;font-family:'JetBrains Mono',monospace;color:var(--muted)">
+          <span><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:#ff6b6b;margin-right:4px"></span>Temp (°C)</span>
+          <span><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:#4ecdc4;margin-right:4px"></span>Humidity (%)</span>
+          <span><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:#95e1d3;margin-right:4px"></span>Pressure (hPa)</span>
+        </div>
+        <div class="chart-inner tall" id="ch_comp"></div>
+      </div>`;
+    renderPlotly('ch_comp', charts.chart1);
+  }
+
+  async function renderDataTab(o) {
+    const res  = await fetch('/api/data' + qs(o));
+    const json = await res.json();
+    const rows = json.data.slice(0, 50).map(d => `
+      <tr>
+        <td style="color:var(--muted)">${d.timestamp}</td>
+        <td style="color:#ff6b6b">${d.corrected_temp.toFixed(2)}</td>
+        <td style="color:#4ecdc4">${d.corrected_humidity.toFixed(2)}</td>
+        <td style="color:#95e1d3">${d.pressure}</td>
+        <td style="color:#f38181">${d.altitude}</td>
+      </tr>`).join('');
+
+    document.getElementById('mainContent').innerHTML = `
+      <label class="upload-zone" for="csvInput2">
+        <input type="file" id="csvInput2" accept=".csv" onchange="handleUpload(event)">
+        <div class="upload-title">Drop a CSV file or click to upload</div>
+        <div class="upload-sub">Columns: Timestamp(ms), Temperature(C), Humidity(%), Pressure(hPa), Altitude(m)</div>
+      </label>
+      <div class="chart-card">
+        <div class="chart-title">Data preview (up to 50 rows) — ${json.count} total</div>
+        <div style="overflow-x:auto">
+          <table class="data-table">
+            <thead><tr>
+              <th>TIMESTAMP (ms)</th><th style="color:#ff6b6b">TEMP °C</th>
+              <th style="color:#4ecdc4">HUMIDITY %</th><th style="color:#95e1d3">PRESSURE hPa</th>
+              <th style="color:#f38181">ALTITUDE m</th>
+            </tr></thead>
+            <tbody>${rows}</tbody>
+          </table>
+        </div>
+      </div>`;
+  }
+
+  // ── Events ───────────────────────────────────────────────────────────────
+
+  function setTab(tab, el) {
+    currentTab = tab;
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    el.classList.add('active');
+    render();
+  }
+
+  function onOffsetChange() {
+    document.getElementById('tempOffsetVal').textContent = parseFloat(document.getElementById('tempOffset').value).toFixed(2);
+    document.getElementById('humOffsetVal').textContent  = document.getElementById('humOffset').value;
+    render();
+  }
+
+  async function resetData() {
+    await fetch('/api/reset', { method: 'POST' });
+    showToast('Reset to sample data');
+    render();
+  }
+
+  function exportCSV() {
+    window.location.href = '/api/export' + qs(offsets());
+    showToast('CSV exported');
+  }
+
+  async function handleUpload(e) {
+    const file = e.target.files[0];
+    if (!file) return;
+    const fd = new FormData();
+    fd.append('file', file);
+    const res  = await fetch('/api/upload', { method: 'POST', body: fd });
+    const json = await res.json();
+    if (json.error) {
+      showToast('Error: ' + json.error);
+    } else {
+      showToast(json.message);
+      render();
+    }
+    e.target.value = '';
+  }
+
+  // ── Init ─────────────────────────────────────────────────────────────────
+  render();
+</script>
+</body>
+</html>
