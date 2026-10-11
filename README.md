@@ -53,9 +53,9 @@ The honeycomb helps reduce sideways flow. The test section is where we observe t
 - Four [3D-print files](01_wind_tunnel_design/design/3D_parts/) for honeycomb parts and supports.
 - [Arduino sensor code](01_wind_tunnel_design/code/src-arduino/) and a differential-pressure simulation.
 - A [CSV graphing tool](01_wind_tunnel_design/code/feature-csv-data-grapher/README.md) with example data.
-- A [data-correction app](01_wind_tunnel_design/code/feature-data-correction/README.md), preserved as an existing tool. Its setup and correction values need checking before use.
+- A [data-correction app](01_wind_tunnel_design/code/feature-data-correction/README.md). Its setup and correction values need checking before use.
 
-No build photos, measured tunnel-performance results, or finished research papers were found in the audited repository. Example and simulated readings are not experimental results.
+We will start adding more build photos, test data, graphs, research papers, and project updates as the work progresses. Example and simulated readings are for learning; measured results will be added after testing.
 
 ## Next small steps
 
@@ -65,13 +65,6 @@ No build photos, measured tunnel-performance results, or finished research paper
 4. Explain one useful paper in five sentences.
 
 [Research ideas and paper space →](03_research/README.md)
-
-<details>
-<summary>Earlier material — preserved archive</summary>
-
-The old README, templates, journal, and all original files are preserved in an [unchanged snapshot](archive/legacy/README.md). Earlier airfoil, drag, and drone sections are archived rather than active projects. [Archive guide and audit →](archive/README.md)
-
-</details>
 
 [Visit AeroAspirant](https://www.aeroaspirant.org/) · [MIT license](LICENSE)
 
