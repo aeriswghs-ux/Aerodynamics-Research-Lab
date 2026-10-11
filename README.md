@@ -1,57 +1,78 @@
-# ✈️ Aerospace Engineering Research — Aerodynamics & Airfoil Studies
+# 🌬️ Aerodynamics Research Lab
 
-> An independent research repository focused on experimental aerodynamics, airfoil optimization, and lift/drag characterization.
+A high-school project notebook: build a wind tunnel, learn from measurements, and explore an upcoming CubeSat idea.
 
----
+| Start here | What you will find | Status |
+| --- | --- | --- |
+| [🌬️ Wind tunnel](01_wind_tunnel_design/README.md) | Parts, sensor code, airflow ideas, and next steps | Design and code files available; physical testing still to document |
+| [🛰️ CubeSat](02_cubesat/README.md) | A simple mission-planning space | Upcoming; mission and hardware undecided |
+| [📚 Research papers & future plans](03_research/README.md) | Reading notes, paper ideas, and small next steps | No papers committed yet |
 
-## 👤 About the Researcher
+## The lab at a glance
 
-Early graduate pursuing aerospace engineering with a concentrated focus on aerodynamics and fluid behavior. This repository documents hands-on experimental work and iterative research into airfoil performance and aerodynamic optimization.
+```mermaid
+mindmap
+  root((Research Lab))
+    Wind tunnel
+      Build and sketch
+      Record sensor readings
+      Check airflow
+      Share photos and graphs
+    Upcoming CubeSat
+      Pick a question
+      Sketch the systems
+      Try a ground prototype
+    Research and future plans
+      Read and explain
+      Collect evidence
+      Write a short paper
+```
 
----
+**Text map:** wind tunnel → build and measure; CubeSat → plan and prototype; research → read, explain, and share evidence.
 
-## 🔬 Research Focus Areas
+## How air could move through the tunnel
 
-- **Airfoil Design & Optimization** — Understanding how geometric parameters affect aerodynamic performance
-- **Lift vs. Drag Characterization** — Quantifying trade-offs and identifying optimal operating ranges
-- **Flow Behavior Under Varying Conditions** — Studying boundary layer dynamics and flow separation
+This is a **proposed suction-type layout**, not a verified drawing of the current build. Dimensions, fan position, and final assembly still need to be recorded.
 
----
+```mermaid
+flowchart LR
+  A["Room air"] --> B["Honeycomb / straightener"]
+  B --> C["Contraction<br/>narrows the passage"]
+  C --> D["Test section<br/>model and measurements"]
+  D --> E["Diffuser<br/>widens the passage"]
+  E --> F["Fan with guard"]
+  F --> G["Air out"]
+```
 
-## 📁 Featured Projects
+**Airflow in words:** air enters → gets straighter → speeds up in a narrower passage → passes the test model → slows in a wider passage → leaves through the fan.
 
-### 1. 🌬️ [Wind Tunnel Design & Calibration](./01_wind_tunnel_design/)
-Design, construction, and calibration of experimental apparatus for controlled aerodynamic testing.
+The honeycomb helps reduce sideways flow. The test section is where we observe the air and record measurements. [Explore the parts and measurement ideas →](01_wind_tunnel_design/README.md)
 
-### 2. 🔄 [Airfoil Comparative Study](./02_airfoil_experiments/)
-Systematic comparison of multiple airfoil profiles tested under identical conditions.
+## What is actually here?
 
-### 3. 🧪 [Drag Reduction Experiments](./03_drag_analysis/)
-Iterative exploration of design modifications aimed at reducing drag coefficients.
+- Four [3D-print files](01_wind_tunnel_design/design/3D_parts/) for honeycomb parts and supports.
+- [Arduino sensor code](01_wind_tunnel_design/code/src-arduino/) and a differential-pressure simulation.
+- A [CSV graphing tool](01_wind_tunnel_design/code/feature-csv-data-grapher/README.md) with example data.
+- A [data-correction app](01_wind_tunnel_design/code/feature-data-correction/README.md), preserved as an existing tool. Its setup and correction values need checking before use.
 
----
+No build photos, measured tunnel-performance results, or finished research papers were found in the audited repository. Example and simulated readings are not experimental results.
 
-## 🎯 Key Skills Demonstrated
+## Next small steps
 
-| Skill | Evidence |
-|---|---|
-| **Experimental Design** | Structured test plans, controlled variables, documented methodology |
-| **Data Analysis** | Quantitative results, graph interpretation, statistical evaluation |
-| **Engineering Documentation** | Clear writeups, labeled diagrams, reproducible procedures |
-| **Iterative Prototyping** | Multiple design cycles with tracked changes and comparisons |
+1. Add a labeled build photo and the real tunnel dimensions.
+2. Check sensor readings against a reference, then save a short test log.
+3. Pick one CubeSat question and draw a first system sketch.
+4. Explain one useful paper in five sentences.
 
----
+[Research ideas and paper space →](03_research/README.md)
 
-## 📸 Visual Documentation
+<details>
+<summary>Earlier material — preserved archive</summary>
 
-*Photos, diagrams, flow visualizations, and test footage available in project folders and the [visuals/](./visuals/) directory as experiments progress.*
+The old README, templates, journal, and all original files are preserved in an [unchanged snapshot](archive/legacy/README.md). Earlier airfoil, drag, and drone sections are archived rather than active projects. [Archive guide and audit →](archive/README.md)
 
----
+</details>
 
-## 📬 Contact
+[Visit AeroAspirant](https://www.aeroaspirant.org/) · [MIT license](LICENSE)
 
-Open research repository — contributions, questions, and collaboration inquiries welcome.
-
----
-
-*Last Updated: 2026-05-24*
+*Structure refreshed: October 11, 2026.*
