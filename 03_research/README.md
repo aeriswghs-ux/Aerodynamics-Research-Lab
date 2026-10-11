@@ -2,7 +2,7 @@
 
 [← Lab home](../README.md) · [Wind tunnel](../01_wind_tunnel_design/README.md) · [CubeSat](../02_cubesat/README.md)
 
-A place for useful reading, short explanations, and papers we may write later. **No completed papers or verified experimental results were found in the repository audit.**
+A place for useful reading, short explanations, and papers we may write later. We will start adding reading notes, paper drafts, and findings as the projects develop.
 
 ## From a question to a paper
 
@@ -50,4 +50,3 @@ No completion dates are set. Update this table when there is actual progress.
 
 **Date · Question · Setup/photo · What I changed · Raw data file · What happened · What to try next**
 
-The [old journal template](../archive/legacy/research_journal/weekly_logs.md) is preserved for reference.
