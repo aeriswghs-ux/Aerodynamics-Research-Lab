@@ -59,6 +59,7 @@ The honeycomb helps reduce sideways flow. The test section is where we observe t
 
 Six supplied MOV clips document the physical setup and preliminary flow visualization, including a mounted model car and visible fog. They are **qualitative preliminary evidence**, not calibrated aerodynamic measurements.
 
+- [3D-print photos](01_wind_tunnel_design/design/photos/README.md) and [test photos](01_wind_tunnel_design/tests/photos/README.md) — 43 supplied images with previews and preserved originals.
 - [Initial test record and limitations](01_wind_tunnel_design/tests/README.md)
 - [Six-video index, previews, and downloads](01_wind_tunnel_design/tests/videos/README.md)
 - [Repeatable test-log template](01_wind_tunnel_design/tests/test-log-template.md)

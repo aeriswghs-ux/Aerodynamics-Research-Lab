@@ -1,0 +1,302 @@
+[
+  {
+    "name": "IMG_0815.HEIC",
+    "size": 1420701,
+    "sha256": "5028addcf6dc87810810579eb51958c384d7017e07cc34ed239b80ad6a214e3d",
+    "dimensions": [
+      3024,
+      4032
+    ],
+    "category": "test",
+    "original": "originals/IMG_0815.HEIC",
+    "preview": "previews/IMG_0815.jpg",
+    "caption": "Model car on a white support inside the clear-sided test section."
+  },
+  {
+    "name": "IMG_0817.HEIC",
+    "size": 1003217,
+    "sha256": "4a44900d8824a2d0b0ead9e9554f2b9c27e23a214cdc6839ec0eb15e2810df7a",
+    "dimensions": [
+      3024,
+      4032
+    ],
+    "category": "test",
+    "original": "originals/IMG_0817.HEIC",
+    "preview": "previews/IMG_0817.jpg",
+    "caption": "Model car on a white support inside the clear-sided test section."
+  },
+  {
+    "name": "IMG_0818(1).HEIC",
+    "size": 1129028,
+    "sha256": "01e5bbdfcbccef7bf9c065a8a1b3d2eddea50d5db0718f683219a58823b7a72b",
+    "dimensions": [
+      3024,
+      4032
+    ],
+    "category": "test",
+    "original": "originals/IMG_0818(1).HEIC",
+    "preview": "previews/IMG_0818(1).jpg",
+    "caption": "Model car on a white support inside the clear-sided test section."
+  },
+  {
+    "name": "IMG_0818.HEIC",
+    "size": 1129028,
+    "sha256": "01e5bbdfcbccef7bf9c065a8a1b3d2eddea50d5db0718f683219a58823b7a72b",
+    "dimensions": [
+      3024,
+      4032
+    ],
+    "category": "test",
+    "original": "originals/IMG_0818.HEIC",
+    "preview": "previews/IMG_0818.jpg",
+    "caption": "Model car on a white support inside the clear-sided test section.",
+    "identical_to": "IMG_0818(1).HEIC"
+  },
+  {
+    "name": "IMG_0869.HEIC",
+    "size": 2577183,
+    "sha256": "993e5a770583858d8c1aa0ca1b8cfcd762e80f9461fcd30cb06bf1a0d0f2021f",
+    "dimensions": [
+      5712,
+      4284
+    ],
+    "category": "test",
+    "original": "originals/IMG_0869.HEIC",
+    "preview": "previews/IMG_0869.jpg",
+    "caption": "Wind tunnel test setup with model support and a phone positioned to record the test section."
+  },
+  {
+    "name": "IMG_0870.HEIC",
+    "size": 2080348,
+    "sha256": "ed4e74470ca589c12d178b2da2b4b951c79cfdb6166b36c985f8ca61d233f04d",
+    "dimensions": [
+      5712,
+      4284
+    ],
+    "category": "test",
+    "original": "originals/IMG_0870.HEIC",
+    "preview": "previews/IMG_0870.jpg",
+    "caption": "Wind tunnel test setup with model support and a phone positioned to record the test section."
+  },
+  {
+    "name": "IMG_0871.HEIC",
+    "size": 2461570,
+    "sha256": "766ef2d0c5ccb6281cd72dc81d3eb2972abf2a48de3d92a7e5a6c91f104f2587",
+    "dimensions": [
+      5712,
+      4284
+    ],
+    "category": "test",
+    "original": "originals/IMG_0871.HEIC",
+    "preview": "previews/IMG_0871.jpg",
+    "caption": "Wind tunnel test setup with model support and a phone positioned to record the test section."
+  },
+  {
+    "name": "IMG_0872.HEIC",
+    "size": 2454855,
+    "sha256": "4e8702d7e71dc6b2e3ce2f00876af9ec4aa4e70dea91e6382ea570dd7e58f67f",
+    "dimensions": [
+      5712,
+      4284
+    ],
+    "category": "test",
+    "original": "originals/IMG_0872.HEIC",
+    "preview": "previews/IMG_0872.jpg",
+    "caption": "Wind tunnel test setup with model support and a phone positioned to record the test section."
+  },
+  {
+    "name": "IMG_0873.HEIC",
+    "size": 2284769,
+    "sha256": "6419a8115fbd3c10079ed0dd033b318cc75f14025d471ebe3fcc50bedee10a1d",
+    "dimensions": [
+      5712,
+      4284
+    ],
+    "category": "test",
+    "original": "originals/IMG_0873.HEIC",
+    "preview": "previews/IMG_0873.jpg",
+    "caption": "Wind tunnel test setup with model support and a phone positioned to record the test section."
+  },
+  {
+    "name": "IMG_0874.HEIC",
+    "size": 2579898,
+    "sha256": "1f9cf2486f863ce602e0221f56298ca648c25b9425687d25de5d351baf1350a5",
+    "dimensions": [
+      5712,
+      4284
+    ],
+    "category": "test",
+    "original": "originals/IMG_0874.HEIC",
+    "preview": "previews/IMG_0874.jpg",
+    "caption": "Wind tunnel test setup with model support and a phone positioned to record the test section."
+  },
+  {
+    "name": "IMG_0875.HEIC",
+    "size": 2591673,
+    "sha256": "22f3b39c484269b0fcb38494641770a7c39f4f3d84eadf6f17663b4b6d4a2139",
+    "dimensions": [
+      5712,
+      4284
+    ],
+    "category": "test",
+    "original": "originals/IMG_0875.HEIC",
+    "preview": "previews/IMG_0875.jpg",
+    "caption": "Wind tunnel test setup with model support and a phone positioned to record the test section."
+  },
+  {
+    "name": "IMG_0876.HEIC",
+    "size": 985468,
+    "sha256": "abfb21a0361c8f2e9c97bf7d44ad1f45eeefe19694ee821445d3339dd0f34b6d",
+    "dimensions": [
+      4032,
+      3024
+    ],
+    "category": "test",
+    "original": "originals/IMG_0876.HEIC",
+    "preview": "previews/IMG_0876.jpg",
+    "caption": "Close view of the model car and support with visible fog in the test section."
+  },
+  {
+    "name": "IMG_0877.HEIC",
+    "size": 2559641,
+    "sha256": "9008fc5a6d6fa8650e4551114e06dc08ce08996fbb2b4a427e775196d98db7c3",
+    "dimensions": [
+      5712,
+      4284
+    ],
+    "category": "test",
+    "original": "originals/IMG_0877.HEIC",
+    "preview": "previews/IMG_0877.jpg",
+    "caption": "Wind tunnel test setup with model support and a phone positioned to record the test section."
+  },
+  {
+    "name": "IMG_0881.HEIC",
+    "size": 2782504,
+    "sha256": "33c5b31c1c986055251e2fe04c91bce5ff8c35628189550805b3c8859664d36c",
+    "dimensions": [
+      5712,
+      4284
+    ],
+    "category": "test",
+    "original": "originals/IMG_0881.HEIC",
+    "preview": "previews/IMG_0881.jpg",
+    "caption": "Wind tunnel test setup with model support and a phone positioned to record the test section."
+  },
+  {
+    "name": "IMG_0882.HEIC",
+    "size": 2709519,
+    "sha256": "9e5d824142cee4ec381fda9699601a62d35d45fbe51bda531c30c4bee607d3a5",
+    "dimensions": [
+      5712,
+      4284
+    ],
+    "category": "test",
+    "original": "originals/IMG_0882.HEIC",
+    "preview": "previews/IMG_0882.jpg",
+    "caption": "Wind tunnel test setup with model support and a phone positioned to record the test section."
+  },
+  {
+    "name": "IMG_0883.HEIC",
+    "size": 2665828,
+    "sha256": "4dfe80f96847f386132b388029473f0133ba3e27c625d3281418abd9fb2a9477",
+    "dimensions": [
+      5712,
+      4284
+    ],
+    "category": "test",
+    "original": "originals/IMG_0883.HEIC",
+    "preview": "previews/IMG_0883.jpg",
+    "caption": "Wind tunnel test setup with model support and a phone positioned to record the test section."
+  },
+  {
+    "name": "IMG_0884.HEIC",
+    "size": 2692873,
+    "sha256": "51497cf9bf318df7d0de28c1e176bdbab0d43a07235e78a73e7f2f373b59e02d",
+    "dimensions": [
+      5712,
+      4284
+    ],
+    "category": "test",
+    "original": "originals/IMG_0884.HEIC",
+    "preview": "previews/IMG_0884.jpg",
+    "caption": "Wind tunnel test setup with model support and a phone positioned to record the test section."
+  },
+  {
+    "name": "IMG_0887.HEIC",
+    "size": 1747902,
+    "sha256": "edd4d59023bca010b033a8d76e1788c63b23e708b0146d744180dde6cf693758",
+    "dimensions": [
+      4032,
+      3024
+    ],
+    "category": "test",
+    "original": "originals/IMG_0887.HEIC",
+    "preview": "previews/IMG_0887.jpg",
+    "caption": "Side view of the enclosure and external fan with visible illuminated haze."
+  },
+  {
+    "name": "IMG_0889.HEIC",
+    "size": 1405247,
+    "sha256": "7135a8e5ee8e8abc6b3e78f36ed16e191a401e097f03131db662633c944dcbf8",
+    "dimensions": [
+      4032,
+      3024
+    ],
+    "category": "test",
+    "original": "originals/IMG_0889.HEIC",
+    "preview": "previews/IMG_0889.jpg",
+    "caption": "Side view of the enclosure and external fan with visible illuminated haze."
+  },
+  {
+    "name": "IMG_0890.HEIC",
+    "size": 1062640,
+    "sha256": "b8381c4eed842ed4847b3f1aeeaa7efdc292168225afe995f6ef7d9d36fcdb25",
+    "dimensions": [
+      4032,
+      3024
+    ],
+    "category": "test",
+    "original": "originals/IMG_0890.HEIC",
+    "preview": "previews/IMG_0890.jpg",
+    "caption": "Wind tunnel test setup with model support and a phone positioned to record the test section."
+  },
+  {
+    "name": "IMG_0891.HEIC",
+    "size": 1340401,
+    "sha256": "3d5a6bdda5d91711aa5e59951c42589eeb50e74697aabc32a43d9862c3e1e427",
+    "dimensions": [
+      4032,
+      3024
+    ],
+    "category": "test",
+    "original": "originals/IMG_0891.HEIC",
+    "preview": "previews/IMG_0891.jpg",
+    "caption": "Wind tunnel test setup with model support and a phone positioned to record the test section."
+  },
+  {
+    "name": "IMG_0892.HEIC",
+    "size": 1373960,
+    "sha256": "7e16da0bc3ff896a4dbed46ced4b72dfc74d47d4deac8da00e29feb6bf826e31",
+    "dimensions": [
+      4032,
+      3024
+    ],
+    "category": "test",
+    "original": "originals/IMG_0892.HEIC",
+    "preview": "previews/IMG_0892.jpg",
+    "caption": "Wind tunnel test setup with model support and a phone positioned to record the test section."
+  },
+  {
+    "name": "IMG_0893.HEIC",
+    "size": 1094563,
+    "sha256": "c66e4b34b5cd1f31bd50d8542bb98bebc1d0a96eccfa91d7119a7ab925da295f",
+    "dimensions": [
+      3024,
+      4032
+    ],
+    "category": "test",
+    "original": "originals/IMG_0893.HEIC",
+    "preview": "previews/IMG_0893.jpg",
+    "caption": "Wind tunnel test setup with model support and a phone positioned to record the test section."
+  }
+]
