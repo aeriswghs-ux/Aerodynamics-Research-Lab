@@ -1,0 +1,62 @@
+[
+  {
+    "name": "IMG_0819-muted.mov",
+    "bytes": 88454745,
+    "fps": 30.006256791912275,
+    "frames": 4556,
+    "duration": 151.83499999999998,
+    "width": 3840.0,
+    "height": 2160.0,
+    "sha256": "75f29e9a6b5d05567b13b452b6bf3696b8cd0ea0ebcfbdc8cdf7ec680ccd4637"
+  },
+  {
+    "name": "IMG_0894-muted.mov",
+    "bytes": 2502717,
+    "fps": 30.24558380008617,
+    "frames": 117,
+    "duration": 3.868333333333333,
+    "width": 1920.0,
+    "height": 1080.0,
+    "sha256": "8b2d133e48415f00535243e25135702b6a8f69cb4dbed55cdc6618024ee375c9"
+  },
+  {
+    "name": "IMG_0880-muted.mov",
+    "bytes": 2873785,
+    "fps": 30.276564774381367,
+    "frames": 104,
+    "duration": 3.435,
+    "width": 1920.0,
+    "height": 1080.0,
+    "sha256": "a750f02450ebe002c48f694ebea2f5485d214933a0a4945f51fbb96136f9cb4b"
+  },
+  {
+    "name": "IMG_0879-muted.mov",
+    "bytes": 2072701,
+    "fps": 30.24348568987612,
+    "frames": 118,
+    "duration": 3.901666666666667,
+    "width": 1920.0,
+    "height": 1080.0,
+    "sha256": "359364ba41053701c705158829132a04ec631284daa7ac9b5cbe81beb34788e0"
+  },
+  {
+    "name": "IMG_0878-muted.mov",
+    "bytes": 2068148,
+    "fps": 30.22974607013301,
+    "frames": 125,
+    "duration": 4.135,
+    "width": 1920.0,
+    "height": 1080.0,
+    "sha256": "414ddc4c6730d6d230d74e980fffa6766cdc0fe0f8a7a54b014c18a1ce08537e"
+  },
+  {
+    "name": "IMG_0866-muted.mov",
+    "bytes": 130670127,
+    "fps": 29.98387963460505,
+    "frames": 3348,
+    "duration": 111.66000000000001,
+    "width": 1920.0,
+    "height": 1080.0,
+    "sha256": "1b9611b84d149079c8e958643d38bde31212e2950f18dd95ea746d086f998045"
+  }
+]
