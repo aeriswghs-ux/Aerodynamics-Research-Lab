@@ -6,6 +6,10 @@
 
 This record covers six supplied MOV clips: IMG_0866, IMG_0878, IMG_0879, IMG_0880, IMG_0894, and IMG_0819. It documents the visible build and initial flow-visualization work without assigning measured performance to the tunnel. Documentation added November 6, 2026; this is not an asserted test date.
 
+## Test-photo gallery
+
+The [test-photo gallery](photos/README.md) contains 23 supplied HEIC files with JPEG previews, grouped separately from the [20 fabrication photos](../design/photos/README.md). These are additional qualitative views; they do not establish separate trials or measured results. Filenames shared with MOV clips do not establish a synchronized capture.
+
 ## Questions addressed by the footage
 
 - What does the physical test section and model support look like?

@@ -1,0 +1,262 @@
+[
+  {
+    "name": "IMG_0808.HEIC",
+    "size": 2459655,
+    "sha256": "7f9c20d5d475fb30f518cadaeab168c31eb4dfce28d113232cfe8e7fff6a8015",
+    "dimensions": [
+      4284,
+      5712
+    ],
+    "category": "3d-print",
+    "original": "originals/IMG_0808.HEIC",
+    "preview": "previews/IMG_0808.jpg",
+    "caption": "White printed wall component on or near the printer build plate."
+  },
+  {
+    "name": "IMG_0809.HEIC",
+    "size": 2593697,
+    "sha256": "34799abd7bd0b7de0e32842ed746edeb6226feb331aa3841648b9618ebfbb645",
+    "dimensions": [
+      4284,
+      5712
+    ],
+    "category": "3d-print",
+    "original": "originals/IMG_0809.HEIC",
+    "preview": "previews/IMG_0809.jpg",
+    "caption": "White printed wall component on or near the printer build plate."
+  },
+  {
+    "name": "IMG_0810.HEIC",
+    "size": 2530502,
+    "sha256": "e98980036485e8d582a8c57c6f70c38717ea665230ef6a6d08bbbd7fb943c7c4",
+    "dimensions": [
+      4284,
+      5712
+    ],
+    "category": "3d-print",
+    "original": "originals/IMG_0810.HEIC",
+    "preview": "previews/IMG_0810.jpg",
+    "caption": "White printed wall component on or near the printer build plate."
+  },
+  {
+    "name": "IMG_0811.HEIC",
+    "size": 3112970,
+    "sha256": "e2242a479a9a11de8761998d1efffb53570953b2e70dc66bebbbcd3296b60546",
+    "dimensions": [
+      4284,
+      5712
+    ],
+    "category": "3d-print",
+    "original": "originals/IMG_0811.HEIC",
+    "preview": "previews/IMG_0811.jpg",
+    "caption": "White printed wall component on or near the printer build plate."
+  },
+  {
+    "name": "IMG_0812.HEIC",
+    "size": 3243906,
+    "sha256": "3d7daf831691e94eecf66124f1db67207424d684a97564ad851b439dc54a0b1f",
+    "dimensions": [
+      4284,
+      5712
+    ],
+    "category": "3d-print",
+    "original": "originals/IMG_0812.HEIC",
+    "preview": "previews/IMG_0812.jpg",
+    "caption": "Rectangular printed frame viewed on a tabletop."
+  },
+  {
+    "name": "IMG_0813.HEIC",
+    "size": 3066292,
+    "sha256": "87f4fa8cad2cbd0b67c578c3b68ef22be2e9093a4d7c5e8818fda0086fdf4356",
+    "dimensions": [
+      4284,
+      5712
+    ],
+    "category": "3d-print",
+    "original": "originals/IMG_0813.HEIC",
+    "preview": "previews/IMG_0813.jpg",
+    "caption": "Rectangular printed frame viewed on a tabletop."
+  },
+  {
+    "name": "IMG_0814.HEIC",
+    "size": 2971675,
+    "sha256": "8f2d4a71fe1abcf26a87f209d56043d60cd7b27e135186a2c71d9639665a1c57",
+    "dimensions": [
+      4284,
+      5712
+    ],
+    "category": "3d-print",
+    "original": "originals/IMG_0814.HEIC",
+    "preview": "previews/IMG_0814.jpg",
+    "caption": "Rectangular printed frame viewed on a tabletop."
+  },
+  {
+    "name": "IMG_0815(1).HEIC",
+    "size": 2081929,
+    "sha256": "74fbf411f1a20da47c9e990ab941ae653eb20ee02ccddd17d5e9ad6dab416092",
+    "dimensions": [
+      3024,
+      4032
+    ],
+    "category": "3d-print",
+    "original": "originals/IMG_0815(1).HEIC",
+    "preview": "previews/IMG_0815(1).jpg",
+    "caption": "Shallow rectangular printed enclosure on the build plate."
+  },
+  {
+    "name": "IMG_0816.HEIC",
+    "size": 1639072,
+    "sha256": "db88041dbf734c63300e283787c1e5cae04ecfe9796952e99560fce86c27b3b4",
+    "dimensions": [
+      3024,
+      4032
+    ],
+    "category": "3d-print",
+    "original": "originals/IMG_0816.HEIC",
+    "preview": "previews/IMG_0816.jpg",
+    "caption": "Shallow rectangular printed enclosure on the build plate."
+  },
+  {
+    "name": "IMG_0817(1).HEIC",
+    "size": 2449414,
+    "sha256": "a4d48935f6caacbc94d445ea8adbe14822f2978b7c4f169ef0ee8d7ea7f6d58b",
+    "dimensions": [
+      4284,
+      5712
+    ],
+    "category": "3d-print",
+    "original": "originals/IMG_0817(1).HEIC",
+    "preview": "previews/IMG_0817(1).jpg",
+    "caption": "Open rectangular printed enclosure on the printer."
+  },
+  {
+    "name": "IMG_0818(2).HEIC",
+    "size": 2473301,
+    "sha256": "6bd1de0cb983ec738b5904f2e39171b5cfffa5723c30050921c028f490bbc80f",
+    "dimensions": [
+      4284,
+      5712
+    ],
+    "category": "3d-print",
+    "original": "originals/IMG_0818(2).HEIC",
+    "preview": "previews/IMG_0818(2).jpg",
+    "caption": "Open rectangular printed enclosure on the printer."
+  },
+  {
+    "name": "IMG_0819.HEIC",
+    "size": 2597875,
+    "sha256": "e4d454d69836283e9741eba2d1efd07c71625a844d65570ba11bcf78d4050626",
+    "dimensions": [
+      4284,
+      5712
+    ],
+    "category": "3d-print",
+    "original": "originals/IMG_0819.HEIC",
+    "preview": "previews/IMG_0819.jpg",
+    "caption": "Open rectangular printed enclosure on the printer."
+  },
+  {
+    "name": "IMG_0820.HEIC",
+    "size": 2670712,
+    "sha256": "c1df35e95102deeeb1591e716f53aab024ec541509a2477153d2b015f3837b13",
+    "dimensions": [
+      4284,
+      5712
+    ],
+    "category": "3d-print",
+    "original": "originals/IMG_0820.HEIC",
+    "preview": "previews/IMG_0820.jpg",
+    "caption": "Tall angled printed wall component viewed on the printer build plate."
+  },
+  {
+    "name": "IMG_0821.HEIC",
+    "size": 2656843,
+    "sha256": "e6de7a7faa0e576e98ccaf3c18bbc5b23d97e6e3070ad3d53246452d397bd9ba",
+    "dimensions": [
+      4284,
+      5712
+    ],
+    "category": "3d-print",
+    "original": "originals/IMG_0821.HEIC",
+    "preview": "previews/IMG_0821.jpg",
+    "caption": "Tall angled printed wall component viewed on the printer build plate."
+  },
+  {
+    "name": "IMG_0822.HEIC",
+    "size": 2478981,
+    "sha256": "336a00fa356c250576743c35a2a657a3b5aa25777cdb144b598ac949bb9a7a83",
+    "dimensions": [
+      4284,
+      5712
+    ],
+    "category": "3d-print",
+    "original": "originals/IMG_0822.HEIC",
+    "preview": "previews/IMG_0822.jpg",
+    "caption": "Tall angled printed wall component viewed on the printer build plate."
+  },
+  {
+    "name": "IMG_0823.HEIC",
+    "size": 1397659,
+    "sha256": "2f20d458e9cd02623cc2dbfb2664c9111e25c68ec28ebb23996be21d6dbb93b1",
+    "dimensions": [
+      3024,
+      4032
+    ],
+    "category": "3d-print",
+    "original": "originals/IMG_0823.HEIC",
+    "preview": "previews/IMG_0823.jpg",
+    "caption": "Tall angled printed wall component viewed on the printer build plate."
+  },
+  {
+    "name": "IMG_0824.HEIC",
+    "size": 2945288,
+    "sha256": "0d253b2943ab0efa08a3da4d852dff9c9af1bc9ec0489bf92b7a8c83ca5488f7",
+    "dimensions": [
+      4284,
+      5712
+    ],
+    "category": "3d-print",
+    "original": "originals/IMG_0824.HEIC",
+    "preview": "previews/IMG_0824.jpg",
+    "caption": "Tall angled printed wall component viewed on the printer build plate."
+  },
+  {
+    "name": "IMG_0861.HEIC",
+    "size": 2628330,
+    "sha256": "830aef6ff26434985c13579b2b0a738c405a41e91e41965bab3cfca18f3a38cf",
+    "dimensions": [
+      4284,
+      5712
+    ],
+    "category": "3d-print",
+    "original": "originals/IMG_0861.HEIC",
+    "preview": "previews/IMG_0861.jpg",
+    "caption": "Printed box component on the build plate; alternate views show its interior and opening."
+  },
+  {
+    "name": "IMG_0862.HEIC",
+    "size": 2790776,
+    "sha256": "411daf04d7825108a511e0945419c547d3f8d22049c9b32331f9a9e415aa08fc",
+    "dimensions": [
+      4284,
+      5712
+    ],
+    "category": "3d-print",
+    "original": "originals/IMG_0862.HEIC",
+    "preview": "previews/IMG_0862.jpg",
+    "caption": "Printed box component on the build plate; alternate views show its interior and opening."
+  },
+  {
+    "name": "IMG_0863.HEIC",
+    "size": 2780059,
+    "sha256": "73215df54b070a5ef72372e20a9572779b6b41d6235ab91a0e10b3d9d6aee2f8",
+    "dimensions": [
+      4284,
+      5712
+    ],
+    "category": "3d-print",
+    "original": "originals/IMG_0863.HEIC",
+    "preview": "previews/IMG_0863.jpg",
+    "caption": "Printed box component on the build plate; alternate views show its interior and opening."
+  }
+]

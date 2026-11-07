@@ -34,6 +34,8 @@ mindmap
 
 | I want to… | Open this |
 | --- | --- |
+| Browse printed components | [3D-print photo gallery](design/photos/README.md) |
+| Browse the test setup | [Test photo gallery](tests/photos/README.md) |
 | Review initial testing | [Test record and limitations](tests/README.md) |
 | Watch preliminary footage | [Six-video index](tests/videos/README.md) |
 | Record a future run | [Test-log template](tests/test-log-template.md) |
@@ -60,7 +62,7 @@ Checking airflow uniformity will need a suitable airspeed measurement method at 
 
 ## Add pictures as you go
 
-A phone photo is enough: label the inlet, honeycomb, test section, and outlet. Include a ruler for scale and a caption saying what the picture shows. Frame previews from the supplied videos are available in the [video index](tests/videos/README.md); these do not provide a calibrated scale.
+A phone photo is enough: label the inlet, honeycomb, test section, and outlet. Include a ruler for scale and a caption saying what the picture shows. The [3D-print gallery](design/photos/README.md) and [test gallery](tests/photos/README.md) now contain the supplied photos. Frame previews are also available in the [video index](tests/videos/README.md). These images do not provide a calibrated scale.
 
 ## Next build notes
 
