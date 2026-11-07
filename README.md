@@ -4,7 +4,7 @@ A high-school project notebook: build a wind tunnel, learn from measurements, an
 
 | Start here | What you will find | Status |
 | --- | --- | --- |
-| [🌬️ Wind tunnel](01_wind_tunnel_design/README.md) | Parts, sensor code, airflow ideas, and next steps | Design and code files available; physical testing still to document |
+| [🌬️ Wind tunnel](01_wind_tunnel_design/README.md) | Parts, sensor code, airflow ideas, and next steps | Build files and six preliminary videos available; quantitative validation pending |
 | [🛰️ CubeSat](02_cubesat/README.md) | A simple mission-planning space | Upcoming; mission and hardware undecided |
 | [📚 Research papers & future plans](03_research/README.md) | Reading notes, paper ideas, and small next steps | No papers committed yet |
 
@@ -50,12 +50,20 @@ The honeycomb helps reduce sideways flow. The test section is where we observe t
 
 ## What is actually here?
 
-- Four [3D-print files](01_wind_tunnel_design/design/3D_parts/) for honeycomb parts and supports.
+- [3D-print files](01_wind_tunnel_design/design/3D_parts/) for tunnel components, honeycomb parts, and supports.
 - [Arduino sensor code](01_wind_tunnel_design/code/src-arduino/) and a differential-pressure simulation.
 - A [CSV graphing tool](01_wind_tunnel_design/code/feature-csv-data-grapher/README.md) with example data.
 - A [data-correction app](01_wind_tunnel_design/code/feature-data-correction/README.md). Its setup and correction values need checking before use.
 
-We will start adding more build photos, test data, graphs, research papers, and project updates as the work progresses. Example and simulated readings are for learning; measured results will be added after testing.
+## Wind tunnel: initial tests and video evidence
+
+Six supplied MOV clips document the physical setup and preliminary flow visualization, including a mounted model car and visible fog. They are **qualitative preliminary evidence**, not calibrated aerodynamic measurements.
+
+- [Initial test record and limitations](01_wind_tunnel_design/tests/README.md)
+- [Six-video index, previews, and downloads](01_wind_tunnel_design/tests/videos/README.md)
+- [Repeatable test-log template](01_wind_tunnel_design/tests/test-log-template.md)
+
+Test dates, fan settings, dimensions, calibration records, and synchronized sensor data were not supplied with these clips. No airspeed, lift, drag, Reynolds number, or flow-uniformity results are claimed. Example and simulated readings elsewhere in the repository remain demonstration data.
 
 ## Next small steps
 

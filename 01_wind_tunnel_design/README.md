@@ -4,6 +4,10 @@
 
 **Goal:** create a small, repeatable stream of air so we can observe flow and learn how to measure it.
 
+## Initial wind tunnel tests
+
+The physical setup and preliminary visualization are now documented in [the initial test record](tests/README.md). [View all six MOV clips and previews](tests/videos/README.md). These are **qualitative preliminary observations**; calibrated performance measurements remain pending.
+
 ## Build → measure → explain
 
 ```mermaid
@@ -30,7 +34,10 @@ mindmap
 
 | I want to… | Open this |
 | --- | --- |
-| Look at printable parts | [Honeycomb and support files](design/3D_parts/) |
+| Review initial testing | [Test record and limitations](tests/README.md) |
+| Watch preliminary footage | [Six-video index](tests/videos/README.md) |
+| Record a future run | [Test-log template](tests/test-log-template.md) |
+| Look at printable parts | [Tunnel component files](design/3D_parts/) |
 | Record environmental readings | [BME280 Arduino logger](code/src-arduino/BME280.V2.ino) |
 | Explore a pressure-sensor simulation | [Updated logger guide](code/src-arduino/testUpdatedProgram/README.md) |
 | Draw graphs from a CSV | [Python grapher guide](code/feature-csv-data-grapher/README.md) |
@@ -39,7 +46,7 @@ mindmap
 
 BME280 readings describe temperature, humidity, and ambient pressure; they do not directly measure lift or drag. The updated logger includes simulated differential-pressure behavior, which needs separate real-hardware validation. The correction app has preset offsets; do not treat them as a verified calibration for your sensor. Its guide describes a Flask template folder, while the committed HTML is beside the app, so its setup also needs review.
 
-## First test idea
+## Next quantitative test idea
 
 **Question:** how much do readings change when the fan setting changes?
 
@@ -53,7 +60,7 @@ Checking airflow uniformity will need a suitable airspeed measurement method at 
 
 ## Add pictures as you go
 
-A phone photo is enough: label the inlet, honeycomb, test section, and outlet. Include a ruler for scale and a caption saying what the picture shows. No photos are committed yet.
+A phone photo is enough: label the inlet, honeycomb, test section, and outlet. Include a ruler for scale and a caption saying what the picture shows. Frame previews from the supplied videos are available in the [video index](tests/videos/README.md); these do not provide a calibrated scale.
 
 ## Next build notes
 
